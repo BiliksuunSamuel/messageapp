@@ -1,0 +1,1 @@
+const socketService=require('../services/OnlineUsersServices');let GetOthersSocket=(req,res)=>{  let user=req.body.user;  socketService.getFriends(user.phone).then(user=>{      res.send(user);  })}module.exports=GetOthersSocket;

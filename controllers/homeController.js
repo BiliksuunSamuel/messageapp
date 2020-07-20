@@ -1,0 +1,1 @@
+let HandleHomePage= async(req, res) => {    return res.render("index", {        user:req.user    });};module.exports = {    HandleHomePage: HandleHomePage,};

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3a6d2014-ce2e-4a07-94ed-11e9136cfaa7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1djkA7SSPdUVbDY9aPolY1cPSej" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.0" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BILIKSUUN SAMUEL\Desktop\ProjectJS\messageapp\public\js" />
+      <recent name="C:\Users\BILIKSUUN SAMUEL\Desktop\nodeApps\messageapp" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="1" BundledDictionary0="english.dic" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a6d2014-ce2e-4a07-94ed-11e9136cfaa7" name="Default Changelist" comment="" />
+      <created>1592945746651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592945746651</updated>
+      <workItem from="1592945763436" duration="33274000" />
+      <workItem from="1593012561726" duration="6986000" />
+      <workItem from="1593021866604" duration="2716000" />
+      <workItem from="1593030351081" duration="10836000" />
+      <workItem from="1593083437484" duration="8459000" />
+      <workItem from="1593101883873" duration="918000" />
+      <workItem from="1593103577471" duration="1180000" />
+      <workItem from="1593106158376" duration="2125000" />
+      <workItem from="1593109886743" duration="583000" />
+      <workItem from="1593111866056" duration="70014000" />
+      <workItem from="1593282813583" duration="812000" />
+      <workItem from="1593379853528" duration="22000" />
+      <workItem from="1593406973009" duration="2050000" />
+      <workItem from="1593947586866" duration="746000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="460" y="187" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593012721342">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="460" y="187" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1593012721342" />
+    <state x="413" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592946715349">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="413" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1592946715349" />
+    <state width="1345" height="70" key="GridCell.Tab.0.bottom" timestamp="1593220075081">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1345" height="70" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1593220075081" />
+    <state width="1345" height="70" key="GridCell.Tab.0.center" timestamp="1593220075080">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1345" height="70" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1593220075080" />
+    <state width="1345" height="70" key="GridCell.Tab.0.left" timestamp="1593220075079">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1345" height="70" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1593220075079" />
+    <state width="1345" height="70" key="GridCell.Tab.0.right" timestamp="1593220075080">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1345" height="70" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1593220075080" />
+    <state x="263" y="119" key="IDE.errors.dialog" timestamp="1593406990557">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="263" y="119" key="IDE.errors.dialog/0.0.1366.768@0.0.1366.768" timestamp="1593406990557" />
+    <state x="184" y="28" key="SettingsEditor" timestamp="1593407863626">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="28" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1593407863626" />
+    <state x="339" y="172" key="run.anything.popup" timestamp="1593200131612">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1593200131612" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1593135653416">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1593135653416" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/actionjs/app.js</url>
+          <line>157</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

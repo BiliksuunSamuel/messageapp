@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>messageme/login</title>
+    <!--adding the custom css files-->
+    <link rel="stylesheet" href="./public/css/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/register.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <div class="col-md-6 col-sm-8 col-lg-4 col mx-auto">
+            <div class="wrapper">
+                <!--adding the login header-->
+                <header class="register-header header">
+                    <% if(typeof error != 'undefined') {%>
+                        <div class="alert alert-dismissible alert-danger">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <p><%= error %></p>
+                        </div>
+                    <% } %>
+                </header>
+                <!--adding the login form-->
+                <div class="register-form">
+                    <form action="/register" method="post" class="form" onsubmit="return ValidateRegisterationDetails();">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label for="registername" class="registernamelbl">name <span class="font-icon"><i class="far fa-user-tie"></i></span></label>
+                                <input type="text" name="registername" id="registername" autocomplete="off" placeholder="name" value="<%= typeof name != 'undefined' ? name : '' %>">
+                            </div>
+                            <div class="input-group">
+                                <label for="registerphone" class="registerphonelbl">phone number <span class="font-icon"><i class="far fa-phone"></i></span></label>
+                                <input type="tel" name="registerphone" id="registerphone" autocomplete="off" placeholder="phone number" value="<%= typeof phone != 'undefined' ? phone : '' %>">
+                            </div>
+                            <div class="input-group">
+                                <label for="registerpasswordlbl" class="registerpasswordlbl">password <span class="font-icon"><i class="far fa-lock"></i></span></label>
+                                <input type="password" name="registerpassword" id="registerpassword" autocomplete="off" placeholder="password">
+                            </div>
+                            <div class="input-group">
+                                <button type="submit" class="registerbtn btn btn-sm btn-block text-sm-center text-light" id="registerbtn">Register</button>
+                            </div>
+                            <div class="special-links">
+                                <a href="/login" class="btn btn-sm text-sm-center text-light">Sign in<span class="font-icon"><i class="far fa-user"></i></span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--adding the custom js file-->
+<script src="./public/js/jquery.min.js"></script>
+<script src="./public/js/bootstrap.bundle.min.js"></script>
+<script src="./public/js/all.js"></script>
+<script src="./public/actionjs/RegisterJs.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+const con=require('../connectDB/dbConfig');const RegisteredUsers=(req,res)=>{ let id=req.body.id; let cmd="select * from users where not id=?"; con.query(cmd,id,(error,rows)=>{     if(error) throw error;     if(rows.length>0){         let Users=JSON.parse(JSON.stringify(rows));         res.send(Users);     } })}module.exports=RegisteredUsers;

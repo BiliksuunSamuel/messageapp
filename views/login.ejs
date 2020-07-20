@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>messageme/login</title>
+    <!--adding the custom css files-->
+    <link rel="stylesheet" href="./public/css/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/login.css">
+</head>
+<body>
+ <div class="container-fluid">
+     <div class="row no-gutters">
+         <div class="col-md-6 col-sm-8 col-lg-4 col mx-auto">
+             <div class="wrapper">
+                 <!--adding the login header-->
+                 <header class="login-header header">
+
+                 </header>
+                 <!--adding the login form-->
+                 <div class="login-form">
+                     <form action="/login" method="post" class="form" onsubmit="return ValidateLogin();">
+                         <div class="form-group">
+                             <div class="input-group">
+                                 <label for="phone" class="loginphonelbl">phone number <span class="font-icon"><i class="far fa-phone"></i></span></label>
+                                 <input type="tel" name="phone" id="phone" autocomplete="off" placeholder="phone number">
+                             </div>
+                             <div class="input-group">
+                                 <label for="password" class="loginpasswordlbl">password <span class="font-icon"><i class="far fa-key"></i></span></label>
+                                 <input type="password" name="password" id="password" autocomplete="off" placeholder="password">
+                             </div>
+                             <div class="input-group">
+                                <button type="submit" class="loginbtn btn btn-sm btn-block text-sm-center text-light" id="loginbtn">Login</button>
+                             </div>
+                             <div class="special-links">
+                                 <a href="#" class="btn btn-sm text-sm-center text-light">Reset Password <span class="font-icon"><i class="far fa-key"></i></span></a>
+                                 <a href="/register" class="btn btn-sm text-sm-center text-light">Register<span class="font-icon"><i class="far fa-user-plus"></i></span></a>
+                             </div>
+                         </div>
+                     </form>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+<!--adding the custom js file-->
+<script src="./public/js/jquery.min.js"></script>
+<script src="./public/js/bootstrap.bundle.min.js"></script>
+<script src="./public/js/all.js"></script>
+<script src="./public/actionjs/LoginJS.js"></script>
+</body>
+</html>

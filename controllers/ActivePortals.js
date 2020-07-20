@@ -1,0 +1,1 @@
+const socketService=require('../services/OnlineUsersServices');const activePortals=(req,res)=>{    let user=req.body.user;    socketService.getOthers(user.phone).then((users)=>{        if(users.length>0){            res.send(JSON.parse(JSON.stringify(users)));        }else{            res.send('empty');        }    })}module.exports=activePortals;

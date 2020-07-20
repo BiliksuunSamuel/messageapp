@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>welcome to the home page</title>
+    <!--adding the custom css files-->
+    <link rel="stylesheet" href="./public/css/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="stylesheet" href="./public/css/mediaQuerie.css">
+    <link rel="stylesheet" href="./public/css/toastr.min.css">
+</head>
+
+<body>
+
+    <div class="container-fluid p-0 m-0">
+        <div class="row no-gutters">
+            <div class="col-md-10 col-sm-12 col-lg-8 bg-danger mx-auto col">
+                <div class="wrapper" id="wrapper">
+                    <!--dividing the wrapper-->
+                    <div class="wrapper-left" id="wrapper-left">
+                        <!--adding the header-->
+                        <header class="header">
+                            <!--profile-pic-->
+                            <div class="profile-picture"></div>
+                            <!--user account name-->
+                            <div class="account-name">
+                                <p class="username" data-user="<%=user%>" data-id="<%=user.id%>" data-phone="<%=user.PhoneNumber%>" data-name="<%=user
+                                  .Name%>">
+                                    <%=user.Name%>
+                                </p>
+                            </div>
+                            <!--account settings buttons-->
+                            <div class="account-buttons d-flex">
+                                <button class="btn btn-sm text-sm-centered text-light UpdateInfoPagebtn"><span class="font-icon"><i class="far fa-info"></i></span></button>
+                                <button class="btn btn-sm text-sm-centered text-light"><span class="font-icon"><i class="far fa-bars"></i></span></button>
+                                <form action="/logout" method="post" class="logout-form mt-1" id="logout-form">
+                                    <input type="hidden" name="logoutID" id="logoutID" value="<%=user.id%>">
+                                    <button type="submit" class="btn btn-sm text-sm-centered text-light logoutbtn" data-id="<%=user
+                                   .id%>"><span
+                                        class="font-icon"><i class="far
+                                           fa-sign-out-alt"></i></span></button>
+                                </form>
+                            </div>
+                        </header>
+                        <!--adding the notification panel-->
+                        <div class="notification-panel">
+                            <button class="btn btn-sm text-sm-centered OnlineSocketBtn text-light Navigationbtn ActiveUsersPagebtn
+                             toggleNavigationbtn"><span
+                      class="font-icons"><i class="far fa-signal"></i></span></button>
+                            <button class="btn btn-sm text-sm-centered text-light Navigationbtn LoggedInUsersPagebtn"><span class="font-icons"><i class="far fa-comment"></i></span><span class="note-counter"></span></button>
+                            <button class="btn btn-sm text-sm-centered text-light RegisteredUsersPageBtn Navigationbtn AllUsersPagebtn"><span
+                      class="font-icons"><i class="far fa-users"></i></span></button>
+                            <button class="btn btn-sm text-sm-centered text-light Navigationbtn AddUserPage"><span class="font-icons"><i class="far fa-user-plus"></i></span></button>
+                        </div>
+                        <!--adding the serach friend form-->
+                        <div class="find-friend">
+                            <form action="#" method="post" class="form search-friend">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input id="searchtxt" name="searchtxt" placeholder="search..." type="search">
+                                        <button class="btn btn-sm text-sm-centered text-light"><span class="font-icon"><i class="far fa-search"></i></span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--adding the page hoster section-->
+                        <div class="parent-page">
+                            <!--adding online users page-->
+                            <div class="ActiveSocketsPage mainChildPage">
+                                <!--adding the single socket user-->
+
+                            </div>
+                            <!--adding login user-->
+                            <div class="LoggedInUsers childPage">
+
+                            </div>
+
+                            <!--adding all users user-->
+                            <div class="AllUsersPage childPage">
+                                <!--adding the single online user-->
+                            </div>
+
+                            <!--my account details page-->
+                            <div class="AccountSettingsPage childPage">
+                                <!--adding the details container-->
+                                <div class="inner-content">
+                                    <!--single detail-->
+                                    <div class="single-detail">
+                                        <div class="details-wrapper">
+                                            <span class="details-font-icon"><i class="fa fa-phone"></i></span>
+                                            <p class="details-data">
+                                                <%=user.PhoneNumber%>
+                                            </p>
+                                            <!--update Controller-->
+                                            <input type="checkbox" name="updatefieldcbx" id="updatefieldcbx">
+                                            <label data-toggle="collapse" data-target="#update-details-form" for="updatefieldcbx" class="btn btn-sm"><span class="font-icon"><i class="far fa-edit"></i></span></label>
+                                        </div>
+                                        <div class="update-details-form collapse" id="update-details-form">
+                                            <form action="/updateinfoPhone" method="POST" class="form update-form">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="tel" name="newphonenumber" id="newphonenumber" placeholder="New PhoneNumber">
+                                                        <button type="submit" class="btn btn-sm updateinfobtn"><span class="font-icon"><i class="far fa-check"></i></span></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--single detail-->
+                                    <div class="single-detail">
+                                        <div class="details-wrapper">
+                                            <span class="details-font-icon"><i class="fa fa-envelope"></i></span>
+                                            <p class="details-data">
+                                                Add email address
+                                            </p>
+                                            <!--update Controller-->
+                                            <input type="checkbox" name="updatefieldcbx" id="updatefieldcbx">
+                                            <label data-toggle="collapse" data-target="#update-details-form-email" for="updatefieldcbx" class="btn btn-sm"><span class="font-icon"><i class="far fa-edit"></i></span></label>
+                                        </div>
+                                        <div class="update-details-form collapse" id="update-details-form-email">
+                                            <form action="/updateinfoEmail" method="POST" class="form update-form">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="email" name="email" id="email" placeholder="Add email address">
+                                                        <button type="submit" class="btn btn-sm updateinfobtn"><span class="font-icon"><i class="far fa-check"></i></span></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--single detail-->
+                                    <div class="single-detail">
+                                        <div class="details-wrapper">
+                                            <span class="details-font-icon"><i class="fa fa-calendar"></i></span>
+                                            <p class="details-data">
+                                                Add date of Birth
+                                            </p>
+                                            <!--update Controller-->
+                                            <input type="checkbox" name="updatefieldcbx" id="updatefieldcbx">
+                                            <label data-toggle="collapse" data-target="#update-details-form-dob" for="updatefieldcbx" class="btn btn-sm"><span class="font-icon"><i class="far fa-edit"></i></span></label>
+                                        </div>
+                                        <div class="update-details-form collapse" id="update-details-form-dob">
+                                            <form action="/updateinfoDOB" method="POST" class="form update-form">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="date" name="DOB" id="DOB" placeholder="Add date of Birth">
+                                                        <button type="submit" class="btn btn-sm updateinfobtn"><span class="font-icon"><i class="far fa-check"></i></span></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--single detail-->
+                                    <div class="single-detail">
+                                        <div class="details-wrapper">
+                                            <span class="details-font-icon"><i class="fa fa-tag"></i></span>
+                                            <p class="details-data">
+                                                select Gender
+                                            </p>
+                                            <!--update Controller-->
+                                            <input type="checkbox" name="updatefieldcbx" id="updatefieldcbx">
+                                            <label data-toggle="collapse" data-target="#update-details-form-gender" for="updatefieldcbx" class="btn btn-sm"><span class="font-icon"><i class="far fa-edit"></i></span></label>
+                                        </div>
+                                        <div class="update-details-form collapse" id="update-details-form-gender">
+                                            <form action="/updateinfoGender" method="POST" class="form update-form">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="radio" name="gender" id="gender" value="Male">Male
+                                                        <input type="radio" name="gender" id="gender" value="Female">Female
+                                                        <input type="radio" name="gender" id="gender" value="Others">Others
+                                                        <button type="submit" class="btn btn-sm updateinfobtn"><span class="font-icon"><i class="far fa-check"></i></span></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--single detail-->
+                                    <div class="single-detail">
+                                        <div class="details-wrapper">
+                                            <span class="details-font-icon"><i class="fa fa-house"></i></span>
+                                            <p class="details-data">
+                                                Add Hometown
+                                            </p>
+                                            <!--update Controller-->
+                                            <input type="checkbox" name="updatefieldcbx" id="updatefieldcbx">
+                                            <label data-toggle="collapse" data-target="#update-details-form-hmtwn" for="updatefieldcbx" class="btn btn-sm"><span class="font-icon"><i class="far fa-edit"></i></span></label>
+                                        </div>
+                                        <div class="update-details-form collapse" id="update-details-form-hmtwn">
+                                            <form action="/updateinfohmtwn" method="POST" class="form update-form">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="text" name="hmtwn" id="hmtwn" placeholder="name of hometown">
+                                                        <button type="submit" class="btn btn-sm updateinfobtn"><span class="font-icon"><i class="far fa-check"></i></span></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--single detail-->
+                                    <div class="single-detail">
+                                        <div class="details-wrapper">
+                                            <span class="details-font-icon"><i class="fa fa-house"></i></span>
+                                            <p class="details-data">
+                                                Add Country
+                                            </p>
+                                            <!--update Controller-->
+                                            <input type="checkbox" name="updatefieldcbx" id="updatefieldcbx">
+                                            <label data-toggle="collapse" data-target="#update-details-form-cntry" for="updatefieldcbx" class="btn btn-sm"><span class="font-icon"><i class="far fa-edit"></i></span></label>
+                                        </div>
+                                        <div class="update-details-form collapse" id="update-details-form-cntry">
+                                            <form action="/updateinfocntry" method="POST" class="form update-form">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="text" name="cntry" id="cntry" placeholder="name of Country">
+                                                        <button type="submit" class="btn btn-sm updateinfobtn"><span class="font-icon"><i class="far fa-check"></i></span></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--single detail-->
+                                    <div class="single-detail">
+                                        <div class="details-wrapper">
+                                            <span class="details-font-icon"><i class="fa fa-house"></i></span>
+                                            <p class="details-data">
+                                                Add City
+                                            </p>
+                                            <!--update Controller-->
+                                            <input type="checkbox" name="updatefieldcbx" id="updatefieldcbx">
+                                            <label data-toggle="collapse" data-target="#update-details-form-ct" for="updatefieldcbx" class="btn btn-sm"><span class="font-icon"><i class="far fa-edit"></i></span></label>
+                                        </div>
+                                        <div class="update-details-form collapse" id="update-details-form-ct">
+                                            <form action="/updateinfocntry" method="POST" class="form update-form">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="text" name="ct" id="ct" placeholder="name of City">
+                                                        <button type="submit" class="btn btn-sm updateinfobtn"><span class="font-icon"><i class="far fa-check"></i></span></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+
+                    <div class="wrapper-right" id="wrapper-right">
+                        <div class="chatPageCover">
+                            <p> Select User to start conversation</p>
+                        </div>
+                        <!--adding the header-->
+                        <header class="header header-rigth">
+                            <!--smaller device toggle button-->
+                            <button class="btn btn-sm text-sm-centered text-light CloseChatPagebtn"><span class="font-icon"><i class="far fa-arrow-left"></i></span></button>
+                            <!--profile-pic-->
+                            <div class="profile-picture"></div>
+                            <!--user account name-->
+                            <div class="account-name chatpage-accountName">
+
+                            </div>
+                            <!--account settings buttons-->
+                            <div class="account-buttons">
+                                <button class="btn btn-sm text-sm-centered text-light"><span class="font-icon"><i class="far fa-info"></i></span></button>
+                                <button class="btn btn-sm text-sm-centered text-light"><span class="font-icon"><i class="far fa-bars"></i></span></button>
+                            </div>
+                        </header>
+                        <!--adding the chat box-->
+                        <div class="chatbox">
+                            <!--adding the chat history-->
+                            <div class="chat-history" id="chat-history">
+                                <!--adding the chat logs-->
+                                <div class="chatlogs" id="chatlogs">
+                                    <!--adding the sigle message-->
+
+                                </div>
+                            </div>
+                            <!--adding the chat message-form-->
+                            <div class="message-form">
+                                <form action="/" method="post" class="form msg-form" id="msg-form">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <button type="button" class="btn btn-sm text-light text-sm-centered"><span class="font-icon"><i class="far fa-paperclip"></i></span></button>
+                                            <input type="text" name="msgtxt" id="msgtxt" placeholder="Type message...." autocomplete="off" autocapitalize="sentences">
+                                            <button type="submit" class="btn btn-sm text-light text-sm-centered"><span class="font-icon"><i class="far fa-paper-plane"></i></span></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--adding the custom js file-->
+    <script src="./public/js/socketio.js"></script>
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/notify.js"></script>
+    <script src="./public/js/toastr.min.js"></script>
+    <script src="./public/actionjs/index.js"></script>
+    <script src="./public/actionjs/AjaxRequest.js"></script>
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/all.js"></script>
+    <script src="./public/actionjs/mediaQuerie.js"></script>
+</body>
+
+</html>
